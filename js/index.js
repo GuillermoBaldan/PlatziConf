@@ -3,8 +3,8 @@ $(function(){
 })
 
 //Script de navegación del carrousel de testimonios
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+
 
 function prevSlide() {
 	console.log("prevSlidew")
@@ -19,13 +19,26 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+
+
+function showSlides() {
   let i;
   let slides = document.getElementsByClassName("testimonial-slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  console.log("------------------------------")
+  console.log("slides.length: "+ slides.length)
+  console.log("slideIndex: "+slideIndex)
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
+  slideIndex++;
+  if (slideIndex > slides.length) 
+  {slideIndex = 1 }
   slides[slideIndex-1].style.display = "block";
+ 
+  setTimeout(showSlides, 1000); // Change image every 5 seconds
 }
+
+
+
+slideIndex = 0;
+showSlides();
