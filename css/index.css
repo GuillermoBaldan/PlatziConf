@@ -106,3 +106,8 @@ footer a {
  .card-flex{
 	display: flex;
  }
+
+ .container-section-testimonies{
+	box-sizing: border-box;
+	height: 40rem;
+ }

@@ -8,6 +8,7 @@ let slides = document.getElementsByClassName("testimonial-slide");
 
 
 function prevSlide() {
+ console.log("Se ha pulsado prevSlide");
  slideIndex -= 1;
  if (slideIndex < 1) 
  {
@@ -17,6 +18,7 @@ function prevSlide() {
 }
 
 function nextSlide() {
+	console.log("Se ha pulsado nextSlide");
 slideIndex += 1;
 if (slideIndex > slides.length) 
 {
