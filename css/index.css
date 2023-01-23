@@ -87,3 +87,18 @@ footer a {
 	background: linear-gradient(90deg, #1c3643 0, #273b47 50%, #1e5372);
 }
 */
+
+.carousel-button {
+	border: 1px solid red;
+	/* display: inline-block !important; 
+ */
+ display: inline-block 
+ }
+
+ .card-testimony{
+	display: inline-block;
+ }
+
+ .card-flex{
+	display: flex;
+ }
