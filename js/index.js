@@ -3,7 +3,7 @@ $(function(){
 })
 
 //Script de navegación del carrousel de testimonios
-let slideIndex = 0;
+let slideIndex;
 
 
 function prevSlide() {
@@ -32,7 +32,9 @@ function showSlides() {
   }
   slideIndex++;
   if (slideIndex > slides.length) 
-  {slideIndex = 1 }
+  {
+	slideIndex = 1 
+  	}
   slides[slideIndex-1].style.display = "block";
  
   setTimeout(showSlides, 1000); // Change image every 5 seconds
