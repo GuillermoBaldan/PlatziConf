@@ -4,40 +4,55 @@ $(function(){
 
 //Script de navegación del carrousel de testimonios
 let slideIndex;
+let slides = document.getElementsByClassName("testimonial-slide");
 
 
 function prevSlide() {
-	console.log("prevSlidew")
-  showSlides(slideIndex -= 1);
+ slideIndex -= 1;
+ if (slideIndex < 1) 
+ {
+   slideIndex = slides.length; 
+	 }
+ draw();
 }
 
 function nextSlide() {
-  showSlides(slideIndex += 1);
+slideIndex += 1;
+if (slideIndex > slides.length) 
+{
+  slideIndex = 1 
+	}
+draw();
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex = n;
+  draw();
 }
 
 
 
 function showSlides() {
   let i;
-  let slides = document.getElementsByClassName("testimonial-slide");
   console.log("------------------------------")
   console.log("slides.length: "+ slides.length)
   console.log("slideIndex: "+slideIndex)
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+
   slideIndex++;
   if (slideIndex > slides.length) 
   {
 	slideIndex = 1 
   	}
-  slides[slideIndex-1].style.display = "block";
- 
-  setTimeout(showSlides, 1000); // Change image every 5 seconds
+
+  draw();
+  setTimeout(showSlides, 4000); // Change image every 5 seconds
+}
+
+function draw(){
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	  }
+	  slides[slideIndex-1].style.display = "block";
 }
 
 
