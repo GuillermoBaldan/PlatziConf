@@ -107,7 +107,7 @@ footer a {
 	display: flex;
  }
 
- .container-section-testimonies{
+ .box-wrapper{
 	box-sizing: border-box;
 	height: 40rem;
  }
