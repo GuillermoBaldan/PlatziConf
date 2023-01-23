@@ -89,11 +89,11 @@ footer a {
 */
 
 .carousel-button {
-	border: 1px solid red;
-	/* display: inline-block !important; 
+	font-size: 2rem;
+/* 	border: 1px solid red;
+ */	/* display: inline-block !important; 
  	*/
- 	display: inline-block;
-	 display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
